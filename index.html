@@ -6,13 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	
+	<div id="main">
 	<span id="setup"></span>
 	<br/>
 	<span id="punch"></span>
 	<br/>
+
 	<button onclick="newJoke('general')">Generate general</button>
-	<button onclick="newJoke('programming')">Generate programming</button>
+	<button onclick="newJoke('programming')">Generate programming</button></div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" > </script>
 	<script type="text/javascript">
 		function newJoke(type) {
@@ -28,7 +29,27 @@
 		@import url('https://fonts.googleapis.com/css?family=Roboto');
 		body {
 			font-family: "Roboto", sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			text-align: center;
+		}
+		#main {
+			margin: auto;
 		} 
+		#punch {
+			color: #e74c3c;
+		}
+		#setup {
+			color: #3498db;}
+		button {
+			margin-top: 10px;
+			background: none;
+			border: 1px solid #2980b9;
+			padding: 10px;
+			color: #34495e;
+		}
 	</style>
 </body>
 </html>
