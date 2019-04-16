@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jokes</title>
+</head>
+<body>
+	
+	<span id="setup"></span>
+	<br/>
+	<span id="punch"></span>
+	<br/>
+	<button onclick="newJoke('general')">Generate general</button>
+	<button onclick="newJoke('programming')">Generate programming</button>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" > </script>
+	<script type="text/javascript">
+		function newJoke(type) {
+			$.getJSON("https://official-joke-api.appspot.com/jokes/" + type+"/random", function (data) {
+				document.getElementById("punch").innerHTML = data[0].punchline;
+				document.getElementById("setup").innerHTML = data[0].setup;
+				console.log(data)});
+			
+		} 
+
+	</script>
+
+</body>
+</html>
